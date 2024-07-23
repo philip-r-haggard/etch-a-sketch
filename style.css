@@ -6,13 +6,38 @@
 
 /********************/
 
+body {
+    height: 100vh;
+}
+
 .container {
+    padding: 30px;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
 }
 
 .square {
     width: 30px;
     height: 30px;
-    outline: 2px solid blue;
+    outline: 2px solid black;
+}
+
+.row-1,
+.row-2,
+.row-3,
+.row-4,
+.row-5,
+.row-6,
+.row-7,
+.row-8,
+.row-9,
+.row-10,
+.row-11,
+.row-12,
+.row-13,
+.row-14,
+.row-15,
+.row-16 {
+    display: flex;
+    justify-content: center;
 }
