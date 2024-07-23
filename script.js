@@ -1,8 +1,10 @@
-function func() {
-
-}
-
+const content = document.querySelector('.content');
 const container = document.querySelector('.container');
+
+let title = document.createElement('div');
+title.classList.add('title');
+title.textContent = 'Welcome to Etch-a-Sketch!';
+content.appendChild(title);
 
 let k = 1;
 

@@ -10,6 +10,16 @@ body {
     height: 100vh;
 }
 
+.content {
+    display: flex;
+    justify-content: center;
+}
+
+.title {
+    font-size: 48px;
+    font-weight: bold;
+}
+
 .container {
     padding: 30px;
     display: flex;
@@ -17,8 +27,8 @@ body {
 }
 
 .square {
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
     outline: 2px solid black;
 }
 
