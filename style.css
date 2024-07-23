@@ -11,8 +11,12 @@ body {
 }
 
 .content {
+    padding: 20px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    gap: 15px;
 }
 
 .title {
@@ -20,8 +24,15 @@ body {
     font-weight: bold;
 }
 
+.button {
+    padding: 10px;
+    border-radius: 5px;
+    background-color: white;
+    border-color: blue;
+}
+
 .container {
-    padding: 30px;
+    padding: 15px;
     display: flex;
     flex-direction: column;
 }
