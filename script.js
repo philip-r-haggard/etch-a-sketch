@@ -7,12 +7,11 @@ title.classList.add('title');
 title.textContent = 'Welcome to Etch-a-Sketch!';
 content.appendChild(title);
 
-/***** add the change grid size button *****/
-let button = document.createElement('button');
-button.classList.add('button');
-button.textContent = 'Change the grid size!';
-/* button.addEventListener('click', getGridSize()); */
-content.appendChild(button);
+/***** add the description *****/
+let description = document.createElement('div');
+description.classList.add('description');
+description.textContent = 'Just hover your mouse over the board to draw with the Etch-a-Sketch! To clear the board just reload the page.';
+content.appendChild(description);
 
 let gridSize = 16;
 let k = 1;
