@@ -8,6 +8,7 @@
 
 body {
     height: 100vh;
+    background-color: grey;
 }
 
 .content {
@@ -17,6 +18,7 @@ body {
     justify-content: center;
     align-items: center;
     gap: 15px;
+    color: white;
 }
 
 .title {
@@ -29,13 +31,6 @@ body {
     text-align: center;
 }
 
-.button {
-    padding: 10px;
-    border-radius: 5px;
-    background-color: white;
-    border-color: blue;
-}
-
 .container {
     padding: 15px;
     display: flex;
@@ -46,6 +41,7 @@ body {
     width: 20px;
     height: 20px;
     outline: 2px solid black;
+    border: 2px solid black;
 }
 
 .row-1,
