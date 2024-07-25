@@ -10,11 +10,21 @@ content.appendChild(title);
 /***** add the description *****/
 let description = document.createElement('div');
 description.classList.add('description');
-description.textContent = 'Just hover your mouse over the board to draw with the Etch-a-Sketch! To clear the board just reload the page.';
+description.textContent = 'Click and hover your mouse over the board to draw with the Etch-a-Sketch! To clear the board just reload the page.';
 content.appendChild(description);
 
 let gridSize = 16;
 let k = 1;
+let isDrawing = false; // Variable to track the mouse click state
+
+// Function to set drawing state
+function startDrawing() {
+    isDrawing = true;
+}
+
+function stopDrawing() {
+    isDrawing = false;
+}
 
 for (let i = 0; i < gridSize; i++) {
 
@@ -27,8 +37,25 @@ for (let i = 0; i < gridSize; i++) {
     for (let j = 0; j < gridSize; j++) {
         let square = document.createElement('div');
         square.classList.add('square');
-        square.addEventListener('mouseover', function () { square.setAttribute('style', 'background-color:blue;'); });
-        square.addEventListener('mouseout', function () { square.setAttribute('style', 'background-color:green;'); });
+
+        // Set up event listeners
+        square.addEventListener('mouseover', function () {
+            if (isDrawing) {
+                square.setAttribute('style', 'background-color:white;');
+            }
+        });
+
+        // Make sure that initial click also draws
+        square.addEventListener('mousedown', function () {
+            isDrawing = true;
+            square.setAttribute('style', 'background-color:white;');
+        });
+
         rowContainer.appendChild(square);
     }
 }
+
+// Set up global event listeners to handle drawing state
+document.addEventListener('mousedown', startDrawing);
+document.addEventListener('mouseup', stopDrawing);
+document.addEventListener('mouseleave', stopDrawing);
